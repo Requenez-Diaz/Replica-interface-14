@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
 import Register from "./Register";
-import Place from "./Place";
+import Data from "./Data";
 
 const Body = () => {
   return (
     <View>
       <Register />
-      <Place/>
+      <Data />
     </View>
   );
 };
