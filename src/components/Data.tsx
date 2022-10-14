@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, TextInput, View, StyleSheet } from "react-native";
+import { Text, TextInput, View, StyleSheet, Platform } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 export interface AddData {
@@ -11,46 +11,96 @@ const Data = () => {
   const [DateTwo, setDateTwo] = useState("");
   return (
     <View>
-      <Text style={styles.txtHead}>From</Text>
-      <View style={styles.form}>
-        <AntDesign name="down" size={24} color="black" />
-        <TextInput
-        style={styles.input}
-          placeholder="July 2021"
-          value={Date}
-          onChangeText={(text) => setDate(text)}
-        />
-        <Text style={styles.txtHead}>To</Text>
+      <View style= {styles.txt}>
+      <Text style= {styles.txt1} >From</Text>
+      <Text style= {styles.txt1} >To</Text>
+      </View>
+      <View style={styles.container}>
         <View style={styles.form}>
-          <AntDesign name="down" size={24} color="black" />
+          <View style={styles.box2}>
+            <AntDesign name="down" size={24} color="black" />
+          </View>
           <TextInput
-          style={styles.input}
+            placeholder="July 2021"
+            value={Date}
+            onChangeText={(text) => setDate(text)}
+          />
+        </View>
+        <View style={styles.form}>
+          <View style={styles.box2}>
+            <AntDesign name="down" size={24} color="black" />
+          </View>
+          <TextInput
             placeholder="July 2021"
             value={DateTwo}
             onChangeText={(text) => setDateTwo(text)}
           />
         </View>
       </View>
+
     </View>
   );
 };
 export default Data;
 
 const styles = StyleSheet.create({
-    txtHead: {
-        marginTop: 20,
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingTop: 20,
+    marginLeft: 20,
+    marginRight: 20,
 
-    },
-    form: {
-        marginTop: 10,
+  },
+  form: {
+    height: 50,
+    borderWidth: 1,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    flexDirection: 'row',
+  },
+  txt: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+    marginRight: 20,
 
-    },
-    input: {
-        padding: 10,
-        borderColor: 'red',
-        borderWidth: 1,
-        borderRadius: 5,
-        width: '35%',
-        marginBottom: 5,
-    }
+  },
+  txt1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 20,
+    paddingTop: 20
+  },
+box2: {
+  justifyContent: 'flex-end'
+}
+
+  //   txtHead: {
+  //     fontSize: 18,
+  //     color: '#05375a'
+  //   },
+  //   form: {
+  //     flexDirection: 'row',
+  //       marginTop: 10,
+  //       width: '40%',
+  //       paddingBottom: 5
+  //   },
+  //   input: {
+  //     flex: 1,
+  //     marginTop: Platform.OS === 'android' ? 0: 12,
+  //       padding: 10,
+  //       borderColor: 'red',
+  //       paddingLeft: 10,
+  //       borderWidth: 1,
+  //       // borderRadius: 10,
+  //       // width: '100%',
+  //       // marginBottom: 5,
+  //   },
+  //   txtHead2: {
+  //     marginTop: 5,
+  // },
 });
