@@ -2,7 +2,7 @@ import { View, TextInput, StyleSheet, Text } from 'react-native';
 
 const Register  = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text>Project Name</Text>
             <TextInput style={styles.inputs}
             placeholder='Event Booking App'
@@ -27,6 +27,8 @@ const styles = StyleSheet.create ({
         borderRadius: 10,
         backgroundColor: 'gray',
 
+    },
+    container: {
+        alignItems: 'center'
     }
-
 })
