@@ -1,13 +1,19 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Register from "./Register";
 import Data from "./Data";
+import Toggle from "./Toggle";
+import Input from "./Input";
 
 const Body = () => {
   return (
-    <View>
-      <Register />
-      <Data />
-    </View>
+    <ScrollView>
+      <View>
+        <Register />
+        <Data />
+        <Toggle />
+        <Input/>
+      </View>
+    </ScrollView>
   );
 };
 export default Body;
