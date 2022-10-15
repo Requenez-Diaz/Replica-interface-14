@@ -15,10 +15,10 @@ const Data = () => {
   return (
     <View>
       <View style={styles.txt}>
-        <Text style= {styles.txt1}>
+        <Text style={styles.txt1}>
           From
         </Text>
-        <Text  style= {styles.txt1}>
+        <Text style={styles.txt1}>
           To
         </Text>
       </View>
@@ -73,10 +73,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingTop: 20,
-  }, 
+  },
   txt1: {
     flex: 1,
     marginHorizontal: 60,
-    fontSize: 15
+    fontSize: 20
   }
 });

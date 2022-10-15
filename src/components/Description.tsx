@@ -1,25 +1,23 @@
 import React from "react";
-import { AntDesign } from "@expo/vector-icons";
 
 import { View, Text, StyleSheet, TextInput } from 'react-native'
 
-const Input = () => {
+const Description = () => {
     return (
         <View>
-            <Text style={styles.textHead}>Asociated with optional</Text>
+            <Text style={styles.textHead}>Description (Optional)</Text>
             <View style={styles.father}>
                 <View style={styles.form}>
                     <TextInput
                         style={styles.input}
-                        placeholder="May 2022"
+                        placeholder="Description"
                     />
-                    <AntDesign style={styles.icon} name="caretdown" size={20} color="black" />
                 </View>
             </View>
         </View>
     )
 }
-export default Input;
+export default Description;
 
 const styles = StyleSheet.create({
     father: {
@@ -34,27 +32,18 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
         marginTop: 15,
     },
-    icon: {
-        paddingTop: 6,
-        paddingHorizontal: 5,
-        paddingVertical: 5
-
-    },
     form: {
+        paddingTop: 10,
         backgroundColor: '#FAFAFA',
-        flexDirection: 'row',
         borderRadius: 5,
-        height: 60,
+        height: 250,
         width: '80%',
-        alignItems: 'center',
 
     },
     input: {
-        flex: 1,
-        justifyContent: 'flex-end',
         marginLeft: 10,
         fontSize: 20,
         color: 'black',
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     }
 }) 

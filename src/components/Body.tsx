@@ -1,8 +1,10 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import Register from "./Register";
 import Data from "./Data";
 import Toggle from "./Toggle";
 import Input from "./Input";
+import Description from "./Description";
+import Url from "./Url";
 
 const Body = () => {
   return (
@@ -11,11 +13,11 @@ const Body = () => {
         <Register />
         <Data />
         <Toggle />
-        <Input/>
+        <Input />
+        <Description />
+        <Url />
       </View>
     </ScrollView>
   );
 };
 export default Body;
-
-const styles = StyleSheet.create({});
